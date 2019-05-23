@@ -74,7 +74,7 @@ class Dog
   
   def self.find_or_create_by(hsh)
     sql = <<-SQL
-      SELECT * FROM dogs WHERE name = ?, breed = ?
+      SELECT * FROM dogs WHERE name = ?
     SQL
     
     DB[:conn].execute(sql, hsh)
