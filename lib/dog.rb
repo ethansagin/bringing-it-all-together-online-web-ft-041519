@@ -82,7 +82,7 @@ class Dog
     if row
       self.new_from_db(row).tap{|d| d}
     else
-      d = self.create(row)
+      d = self.create(name, breed)
     end
   end
   
