@@ -63,4 +63,6 @@ class Dog
     Dog.new(hsh).tap{|dog| dog.save}
   end
   
+  def self.find_or_create_by
+  
 end
