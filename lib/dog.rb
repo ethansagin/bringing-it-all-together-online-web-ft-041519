@@ -78,7 +78,12 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, name, breed)
-    binding.pry
+
+    if row[0]
+      self.new_from_db(row)
+    else
+      self.create(row)
+    end
   end
   
 end
