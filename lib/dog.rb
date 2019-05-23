@@ -73,8 +73,7 @@ class Dog
   end
   
   def self.find_or_create_by(hsh)
-    self.find_by_name(hsh[0])
-binding.pry
+    self.find_by_name(hsh[0]) || self.create(hsh)
   end
   
 end
