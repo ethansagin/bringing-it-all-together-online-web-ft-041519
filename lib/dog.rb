@@ -50,6 +50,15 @@ class Dog
     row = DB[:conn].execute(sql, name)[0]
     self.new_from_db(row)
   end
+  
+  def self.find_by_id(id)
+    sql = <<-SQL
+      SELECT * FROM dogs WHERE Dogs.name = ?
+    SQL
+    
+    row = DB[:conn].execute(sql, name)[0]
+    self.new_from_db(row)
+  end
 
   def update
     sql = <<-SQL
