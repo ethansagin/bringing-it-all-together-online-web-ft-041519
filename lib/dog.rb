@@ -73,7 +73,7 @@ class Dog
   end
   
   def self.find_or_create_by(hsh)
-    self.find_by_id(self.id) || self.create(hsh)
+    
   end
   
 end
