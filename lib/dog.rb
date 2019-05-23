@@ -1,3 +1,5 @@
+require 'pry'
+
 class Dog 
   attr_accessor :id, :name, :breed 
   
@@ -46,8 +48,8 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, name)
-    
-    self.tap{|dog| dog.new_from_db(row)}
+    binding.pry
+    self.new_from_db(row)
   end
   
 end
