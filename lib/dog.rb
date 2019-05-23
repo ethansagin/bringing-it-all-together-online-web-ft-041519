@@ -81,7 +81,7 @@ class Dog
 
     if row[0]
       self.new_from_db(row)
-      binding.pry
+     # binding.pry
     else
       self.create(row)
     end
