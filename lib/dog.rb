@@ -47,7 +47,7 @@ class Dog
     
     row = DB[:conn].execute(sql, name)
     
-    self.new_from_db(row)
+    self.tap{|dog| dog.new_from_db(row)}
   end
   
 end
