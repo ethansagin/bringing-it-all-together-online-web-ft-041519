@@ -80,10 +80,9 @@ class Dog
     row = DB[:conn].execute(sql, name, breed)[0]
 
     if row[0]
-      self.new_from_db(row)
-     # binding.pry
+      self.new_from_db(row).tap{|d| d}
     else
-      self.create(row)
+      self.create(row).tap{|d| d}
     end
   end
   
