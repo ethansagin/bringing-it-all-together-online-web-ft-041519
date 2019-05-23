@@ -83,6 +83,7 @@ class Dog
       self.new_from_db(row).tap{|d| d}
     else
       d = self.create(row)
+      binding.pry
     end
   end
   
