@@ -60,7 +60,7 @@ class Dog
   end
   
   def self.create(hsh)
-    
+    Dog.new(hsh).tap{|dog| dog.save}
   end
   
 end
