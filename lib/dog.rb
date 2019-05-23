@@ -82,7 +82,7 @@ class Dog
     if row
       self.new_from_db(row).tap{|d| d}
     else
-      self.create({:name => name, :breed => breed)
+      self.create({:name => name, :breed => breed})
     end
   end
   
