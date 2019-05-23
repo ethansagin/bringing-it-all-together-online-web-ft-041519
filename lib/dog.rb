@@ -78,7 +78,6 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, hsh)
-    binding.pry
   end
   
 end
