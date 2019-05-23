@@ -69,7 +69,7 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, id)[0]
-    binding.pry
+    self.new_from_db(row)
   end
   
   def self.find_or_create_by
